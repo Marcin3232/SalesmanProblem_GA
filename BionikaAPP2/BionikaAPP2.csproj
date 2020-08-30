@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>officer-4183897_640.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="6535226.png" />
+    <None Remove="board.jpg" />
+    <None Remove="Daco_11520.png" />
+    <None Remove="frame.jpg" />
+    <None Remove="hiclipart.com.png" />
+    <None Remove="polskamala.png" />
+    <None Remove="ui.png" />
+    <None Remove="x2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    <PackageReference Include="LiveCharts.Wpf.NetCore3" Version="0.9.7" />
+    <PackageReference Include="MaterialDesignColors" Version="1.2.6" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="6535226.png" />
+    <Resource Include="board.jpg" />
+    <Resource Include="Daco_11520.png" />
+    <Resource Include="frame.jpg" />
+    <Resource Include="hiclipart.com.png" />
+    <Resource Include="polskamala.png" />
+    <Resource Include="ui.png" />
+    <Resource Include="x2.png" />
+  </ItemGroup>
+
+</Project>

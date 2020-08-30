@@ -1,0 +1,133 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:oxy="http://oxyplot.org/wpf"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BionikaAPP2"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="BionikaAPP2.MainWindow"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        mc:Ignorable="d"
+        Title="Genetic Algorithm to salesman problem" MinHeight="1000" MinWidth="1700" Height="1080" Width="1920" AutomationProperties.IsOffscreenBehavior="Onscreen" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FFEFF5F4" WindowStyle="SingleBorderWindow" ResizeMode="CanResizeWithGrip" SizeToContent="Manual" Cursor="Pen" AutomationProperties.IsRequiredForForm="True" AutomationProperties.IsRowHeader="True">
+    <Grid>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+        <Image HorizontalAlignment="Left" Margin="-633,49,0,-693" Width="1888" Source="/Daco_11520.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="641.889"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <Image HorizontalAlignment="Left" Height="1063" Margin="465,-223,0,0" VerticalAlignment="Top" Width="1441" Source="/Daco_11520.png"/>
+
+        <Image Margin="527,829,-598,-99" Source="/hiclipart.com.png"/>
+
+        <Image HorizontalAlignment="Left" Margin="-514,-174,0,410" Width="2701" Source="/Daco_11520.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-29.055"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+        <Label x:Name="Topic" Content="Traveling salesman problem using genetic algorithms" HorizontalAlignment="Left" Margin="140,21,0,0" VerticalAlignment="Top" Height="84" Width="1808" FontWeight="Bold" FontSize="56" FontFamily="Segoe UI" Foreground="Black" Background="#00000000" FontStyle="Normal"/>
+
+        <Grid Height="1080">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="53*"/>
+                <ColumnDefinition Width="187*"/>
+                <ColumnDefinition Width="144*"/>
+            </Grid.ColumnDefinitions>
+
+            <Canvas x:Name="canvas" Margin="82,174,0,0" Grid.Column="2" MinHeight="645" MinWidth="600" MaxHeight="645" MaxWidth="600" VerticalAlignment="Top" Height="645" HorizontalAlignment="Left" Width="625">
+                <Canvas.Effect>
+                    <DropShadowEffect/>
+                </Canvas.Effect>
+                <Canvas.Background>
+                    <ImageBrush ImageSource="/polskamala.png"/>
+                </Canvas.Background>
+            </Canvas>
+
+            <Label Content="Generation" Margin="10,183,5,826" FontSize="20" FontWeight="Bold"/>
+            <TextBox x:Name="generationBox" Margin="10,227,25,0" Text="100" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" PreviewTextInput="generationBox_PreviewTextInput" MouseDoubleClick="generationBox_MouseDoubleClick" FontSize="20" Background="#FFDEDEDE">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="Mutation rate" Margin="10,272,5,0" VerticalAlignment="Top" Height="40" FontSize="20" FontWeight="Bold"/>
+            <TextBox x:Name="mutationrate" Margin="10,317,25,0" Text="0,015" TextWrapping="Wrap" VerticalAlignment="Top" MouseDoubleClick="mutationrate_MouseDoubleClick" MouseEnter="mutationrate_MouseEnter" TextInput="mutationrate_TextInput" PreviewTextInput="NumberValidationTextBox" Height="40" FontSize="20" Background="#FFDEDEDE">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="Tournament size" Margin="10,363,5,0" VerticalAlignment="Top" Height="39" FontSize="20" FontWeight="Bold"/>
+            <TextBox x:Name="toursize" Margin="10,407,25,0" Text="5" TextWrapping="Wrap" VerticalAlignment="Top" MouseDoubleClick="toursize_MouseDoubleClick" PreviewTextInput="toursize_PreviewTextInput" Height="40" FontSize="20" Background="#FFDEDEDE">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="Population size" Margin="10,454,5,0" VerticalAlignment="Top" Height="40" FontSize="20" FontWeight="Bold"/>
+            <TextBox x:Name="populationBox" Margin="10,502,25,0" Text="50" TextWrapping="Wrap" VerticalAlignment="Top" PreviewTextInput="populationBox_PreviewTextInput" Height="39" RenderTransformOrigin="0.489,0.53" FontSize="20" FontWeight="Bold" Background="#FFDEDEDE">
+                <TextBox.Effect>
+                    <DropShadowEffect/>
+                </TextBox.Effect>
+            </TextBox>
+            <Label Content="Select the number &#xA;of cities" Margin="10,566,5,0" VerticalAlignment="Top" Height="70" FontSize="20" FontWeight="Bold"/>
+            <CheckBox x:Name="checkBox" Content="Capitals 11 cities" Margin="14,650,1,0" VerticalAlignment="Top" RenderTransformOrigin="0.462,0.334" Checked="checkBox_Checked" Height="39" FontSize="20" FontWeight="Bold" Background="#FFDEDEDE"/>
+            <CheckBox x:Name="checkBox1" Content="25 cities" Margin="14,690,1,325" Checked="checkBox1_Checked" FontSize="20" FontWeight="Bold" Background="#FFDEDEDE"/>
+            <CheckBox x:Name="checkBox2" Content="30 cities" Margin="14,729,1,286" RenderTransformOrigin="0.484,0.533" Checked="checkBox2_Checked" FontSize="20" FontWeight="Bold" Background="#FFDEDEDE"/>
+            <CheckBox x:Name="checkBox3" Content="50 cities" Margin="14,766,1,249" Checked="checkBox3_Checked" FontSize="20" FontWeight="Bold" Background="#FFDEDEDE"/>
+            <Button x:Name="button" Content="Start" Margin="10,841,15,156" Click="button_Click" FontSize="25" FontWeight="Bold" Background="#FFDEDEDE" >
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+
+
+            </Button>
+
+            <ListView x:Name="resultList" Margin="5,164,0,600" Background="#FFDEDEDE" Grid.Column="1">
+                <ListView.Effect>
+                    <DropShadowEffect/>
+                </ListView.Effect>
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <lvc:CartesianChart x:Name="chart" MinWidth="350" Series="{Binding series}" LegendLocation="Right" RenderTransformOrigin="0.5,0.5" Foreground="Black" Margin="255,629,0,116" Grid.ColumnSpan="2"  >
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="distance" MinValue="0" MaxValue="{Binding MaxXAxisValue}"  Labels="{Binding AnalysisController.Labels}" FontSize="18"
+                  Foreground="Black"/>
+                </lvc:CartesianChart.AxisY>
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="generation"   MaxValue="{Binding MaxXAxisValue}" MinValue="{Binding AxisMin}" Unit="{Binding AxisUnit}" FontSize="18"
+                                  Labels="{Binding AnalysisController.Labels}"
+                  Foreground="Black"/>
+                </lvc:CartesianChart.AxisX>
+
+            </lvc:CartesianChart>
+            <materialDesign:Flipper HorizontalAlignment="Left" VerticalAlignment="Center" Height="0" Width="0"/>
+
+            <Label Content="Wyniki" Margin="5,117,291,0" VerticalAlignment="Top" Height="46" FontWeight="Bold" FontSize="24" Grid.ColumnSpan="2" Grid.Column="1"/>
+            <Label x:Name="bestResult" Content="" HorizontalAlignment="Left" Margin="5,534,0,0" VerticalAlignment="Top" Width="622" Height="40" FontWeight="Bold" FontSize="20" Grid.Column="1"/>
+            <Label x:Name="firstResult" Content="" HorizontalAlignment="Left" Margin="6,479,0,0" VerticalAlignment="Top" Width="609" FontWeight="Bold" FontSize="20" Height="40" Grid.Column="1"/>
+
+        </Grid>
+
+    </Grid>
+</Window>
