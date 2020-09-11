@@ -2,11 +2,9 @@
 A student project realize a visualization of the traveling salesman problem with the use of genetic algoritm.
 
 # Application example
-<p>
-    <img src="https://github.com/Marcin3232/SalesmanProblem_GA/blob/master/BionikaAPP2/image/example1.png" width="220" height="240" />
-</p>
+
 ![](https://github.com/Marcin3232/SalesmanProblem_GA/blob/master/BionikaAPP2/image/example1.png)
-![](/SalesmanProblem_GA/BionikaAPP2/image/example2.png)
+![](https://github.com/Marcin3232/SalesmanProblem_GA/blob/master/BionikaAPP2/image/example2.png)
 # Introducing
 ## project assumptions
 The aim of the project is to solve the traveling salesman problem with the use evolution algorithms. In this project, we used a genetic algorithm. Visualization of the problem, added possibilities a changes a parametrs. Comparison of the genetic algorithm with the traditional symetric algorithm of the traveling salesman problem.
