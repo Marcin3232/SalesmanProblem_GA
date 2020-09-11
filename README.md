@@ -21,7 +21,12 @@ The aim of the project is to solve the traveling salesman problem with the use e
 **Genetic algorithm** - is a family of algorithms looking for the best solution to a problem based on the phenomenon of genetic evolution. The image of a given problem is also built on the bases of biology. 
 
 ### basic definitions- biological
-- 
+- **Invidual** - single independent unit
+- **Population** - It consists of organisms (individuals) which are crossed with each other and can be divided into local populations. Ecological and reproductive interactions between individuals in a given population are more frequent than interactions with individuals from other populations of the same species.
+- **Gene** - the basic unit of heredity that determines certain characteristics of the organism.
+- **Chromosome** - form of organization of genetic material inside a cell.
+- **Mutation** - sudden, unexpected change in genetic material.
+- **Crossover** - randomly splitting two chromosomes at a given point and changing them with each other.
 
 
 
