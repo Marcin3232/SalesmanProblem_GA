@@ -68,6 +68,9 @@ Conditions under which the algorithm is to stop, in order to limit the time and 
 - no change in improvement between previous generations.
 - the disappearance of population diversity in subsequent iterations of the algorithm.
 
+### The traveling salesman problem
+It is an optimization problem that consists in finding the shortest path between certain points. An example would be a merchant who must visit each city at least once and return to the starting point. the main goal is to visit these cities in the shortest possible time. The difficulty of the traveling salesman problem is that with a very large amount of data, e.g. cities. The analysis of this data grows tremendously, and so does the computing power.
+
 
 # Setup
 
